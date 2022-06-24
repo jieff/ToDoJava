@@ -3,6 +3,9 @@
  */
 package TodoApp;
 
+import util.ConnectionFactory;
+import java.sql.Connection;
+
 public class App {
     
     
@@ -11,7 +14,9 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        //System.out.println(new App().getGreeting());
+        
+        Connection c = ConnectionFactory.getConnection();
         
         
     }
