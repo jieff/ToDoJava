@@ -17,6 +17,7 @@ public class App {
         //System.out.println(new App().getGreeting());
         
         Connection c = ConnectionFactory.getConnection();
+        ConnectionFactory.closeConnection(c);
         
         
     }

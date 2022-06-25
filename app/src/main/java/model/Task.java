@@ -17,19 +17,25 @@ public class Task {
     private String name;
     private String description;
     private boolean completed;
+    private String notes;
     private Date deadline;
     private Date createdAt;
     private Date updateAt;
 
-    public Task(int id, int idProject, String name, String description, boolean completed, Date deadline, Date createdAt, Date updateAt) {
+    public Task(int id, int idProject, String name, String description, boolean completed, String notes, Date deadline, Date createdAt, Date updateAt) {
         this.id = id;
         this.idProject = idProject;
         this.name = name;
         this.description = description;
         this.completed = completed;
+        this.notes = notes;
         this.deadline = deadline;
         this.createdAt = createdAt;
         this.updateAt = updateAt;
+    }
+    
+    public Task() {
+        this.createdAt = new Date();
     }
 
     public int getId() {
@@ -72,6 +78,14 @@ public class Task {
         this.completed = completed;
     }
 
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
     public Date getDeadline() {
         return deadline;
     }
@@ -98,9 +112,11 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" + "id=" + id + ", idProject=" + idProject + ", name=" + name + ", description=" + description + ", completed=" + completed + ", deadline=" + deadline + ", createdAt=" + createdAt + ", updateAt=" + updateAt + '}';
+        return "Task{" + "id=" + id + ", idProject=" + idProject + ", name=" + name + ", description=" + description + ", completed=" + completed + ", notes=" + notes + ", deadline=" + deadline + ", createdAt=" + createdAt + ", updateAt=" + updateAt + '}';
     }
+
     
+
     
     
 }
